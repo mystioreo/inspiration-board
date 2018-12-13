@@ -58,7 +58,7 @@ class NewCardForm extends Component {
 
         <div>
           <label className="new-card-form--label" htmlFor="emoji">Emoji</label>
-          <select value={this.state.emoji} onChange={this.onFormChange}>
+          <select name="emoji" value={this.state.emoji} onChange={this.onFormChange}>
             {this.emojiOptions()}
           </select>
         </div>
