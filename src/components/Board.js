@@ -9,17 +9,18 @@ import CARD_DATA from '../data/card-data.json';
 
 
 class Board extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       cards: [],
+      url: props.url + props.boardName + "/cards",
     };
   }
 
   componentDidMount() {
-    const url = this.props.url + this.props.boardName + "/cards";
-    axios.get(url)
+
+    axios.get(this.state.url)
       .then((response) => {
         const cards = response.data.map((cardHash) => {
           return cardHash["card"];
@@ -34,6 +35,22 @@ class Board extends Component {
       });
   }
 
+  addCard = (newCard) => {
+
+    axios.post(this.state.url, newCard)
+      .then((response) => {
+        console.log(response);
+
+
+      })
+      .catch((error) => {
+        // do something
+      })
+
+
+
+
+  }
 
   populateCards = () => {
     return this.state.cards.map((card) => {
@@ -45,7 +62,9 @@ class Board extends Component {
     return (
       <div>
         {this.populateCards()}
+        <NewCardForm addCardCallback={this.addCard}/>
       </div>
+
     )
   }
 
