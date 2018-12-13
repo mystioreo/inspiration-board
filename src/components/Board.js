@@ -5,7 +5,7 @@ import axios from 'axios';
 import './Board.css';
 import Card from './Card';
 import NewCardForm from './NewCardForm';
-import CARD_DATA from '../data/card-data.json';
+
 
 
 class Board extends Component {
@@ -50,14 +50,17 @@ class Board extends Component {
         // do something
       })
 
+  }
 
+  removeCard = (cardId) => {
 
+    console.log(cardId);
 
   }
 
   populateCards = () => {
     return this.state.cards.map((card) => {
-      return <Card id={card.id} text={card.text} emoji={card.emoji} />
+      return <Card key={card.id} id={card.id} text={card.text} emoji={card.emoji} removeCardCallback={this.removeCard}/>
     });
   }
 
