@@ -29,6 +29,8 @@ class Board extends Component {
       })
       .catch((error) => {
 
+        //fill in an error handler here
+
       });
   }
 
