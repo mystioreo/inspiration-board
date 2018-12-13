@@ -28,5 +28,8 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "gh-pages": "^2.0.1"
-  }
+  },
+  "jest": {
+  "snapshotSerializers": ["enzyme-to-json/serializer"]
+}
 }
