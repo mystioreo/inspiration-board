@@ -39,8 +39,11 @@ class Board extends Component {
 
     axios.post(this.state.url, newCard)
       .then((response) => {
-        console.log(response);
 
+        const newCard = response.data.card;
+        const cards = [newCard, ...this.state.cards];
+
+        this.setState({cards});
 
       })
       .catch((error) => {
