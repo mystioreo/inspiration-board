@@ -16,10 +16,16 @@ class Board extends Component {
     };
   }
 
+  populateCards = () => {
+    return CARD_DATA["cards"].map((card) => {
+      return <Card id={card.id} text={card.text} emoji={card.emoji} />
+    });
+  }
+
   render() {
     return (
       <div>
-        <Card id={5} text="new card" emoji="smile" />
+        {this.populateCards()}
       </div>
     )
   }
