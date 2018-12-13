@@ -40,6 +40,13 @@ class NewCardForm extends Component {
     this.resetState();
   }
 
+  emojiOptions = () => {
+    return EMOJI_LIST.map((emojiName) => {
+
+      return <option value={emojiName}>{emoji.getUnicode(emojiName)}</option>;
+    })
+  }
+
   render() {
     return (
       <form onSubmit={this.onSubmit} name="new-card-form" id="new-card-form" className="new-card-form">
@@ -51,7 +58,9 @@ class NewCardForm extends Component {
 
         <div>
           <label className="new-card-form--label" htmlFor="emoji">Emoji</label>
-          <input name="emoji" placeholder="emoji" onChange={this.onFormChange} value={this.state.emoji} />
+          <select value={this.state.emoji} onChange={this.onFormChange}>
+            {this.emojiOptions()}
+          </select>
         </div>
 
           <input className="btn btn-success new-card-form--submit" type="submit" name="submit" value="Add a Card" />
