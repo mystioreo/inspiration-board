@@ -7,6 +7,7 @@ import Card from './Card';
 import NewCardForm from './NewCardForm';
 import CARD_DATA from '../data/card-data.json';
 
+
 class Board extends Component {
   constructor() {
     super();
@@ -16,8 +17,24 @@ class Board extends Component {
     };
   }
 
+  componentDidMount() {
+    const url = this.props.url + this.props.boardName + "/cards";
+    axios.get(url)
+      .then((response) => {
+        const cards = response.data.map((cardHash) => {
+          return cardHash["card"];
+        })
+        this.setState({cards});
+
+      })
+      .catch((error) => {
+
+      });
+  }
+
+
   populateCards = () => {
-    return CARD_DATA["cards"].map((card) => {
+    return this.state.cards.map((card) => {
       return <Card id={card.id} text={card.text} emoji={card.emoji} />
     });
   }
@@ -33,7 +50,8 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-
+  url: PropTypes.string.isRequired,
+  boardName: PropTypes.string.isRequired,
 };
 
 export default Board;
