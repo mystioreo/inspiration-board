@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/mystioreo/inspiration-board/precache-manifest.628a329164abed71e293585e767b0a9b.js"
+  "/inspiration-board/precache-manifest.30aa0e13deb9b08f4dc2b949a2d8b4bf.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/mystioreo/inspiration-board/index.html", {
+workbox.routing.registerNavigationRoute("/inspiration-board/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

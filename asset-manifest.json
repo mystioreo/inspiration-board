@@ -1,13 +1,13 @@
 {
-  "main.css": "/mystioreo/inspiration-board/static/css/main.e0ab854a.chunk.css",
-  "main.js": "/mystioreo/inspiration-board/static/js/main.45f73f3f.chunk.js",
-  "main.js.map": "/mystioreo/inspiration-board/static/js/main.45f73f3f.chunk.js.map",
-  "static/js/1.c0fc13bc.chunk.js": "/mystioreo/inspiration-board/static/js/1.c0fc13bc.chunk.js",
-  "static/js/1.c0fc13bc.chunk.js.map": "/mystioreo/inspiration-board/static/js/1.c0fc13bc.chunk.js.map",
-  "runtime~main.js": "/mystioreo/inspiration-board/static/js/runtime~main.da91b3e2.js",
-  "runtime~main.js.map": "/mystioreo/inspiration-board/static/js/runtime~main.da91b3e2.js.map",
-  "static/css/main.e0ab854a.chunk.css.map": "/mystioreo/inspiration-board/static/css/main.e0ab854a.chunk.css.map",
-  "index.html": "/mystioreo/inspiration-board/index.html",
-  "precache-manifest.628a329164abed71e293585e767b0a9b.js": "/mystioreo/inspiration-board/precache-manifest.628a329164abed71e293585e767b0a9b.js",
-  "service-worker.js": "/mystioreo/inspiration-board/service-worker.js"
+  "main.css": "/inspiration-board/static/css/main.e0ab854a.chunk.css",
+  "main.js": "/inspiration-board/static/js/main.8cf9afe3.chunk.js",
+  "main.js.map": "/inspiration-board/static/js/main.8cf9afe3.chunk.js.map",
+  "static/js/1.c0fc13bc.chunk.js": "/inspiration-board/static/js/1.c0fc13bc.chunk.js",
+  "static/js/1.c0fc13bc.chunk.js.map": "/inspiration-board/static/js/1.c0fc13bc.chunk.js.map",
+  "runtime~main.js": "/inspiration-board/static/js/runtime~main.d769499a.js",
+  "runtime~main.js.map": "/inspiration-board/static/js/runtime~main.d769499a.js.map",
+  "static/css/main.e0ab854a.chunk.css.map": "/inspiration-board/static/css/main.e0ab854a.chunk.css.map",
+  "index.html": "/inspiration-board/index.html",
+  "precache-manifest.30aa0e13deb9b08f4dc2b949a2d8b4bf.js": "/inspiration-board/precache-manifest.30aa0e13deb9b08f4dc2b949a2d8b4bf.js",
+  "service-worker.js": "/inspiration-board/service-worker.js"
 }
