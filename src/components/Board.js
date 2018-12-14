@@ -14,6 +14,7 @@ class Board extends Component {
 
     this.state = {
       cards: [],
+      errorMessage: "",
     };
   }
 
@@ -24,13 +25,13 @@ class Board extends Component {
         const cards = response.data.map((cardHash) => {
           return cardHash["card"];
         })
-        this.setState({cards});
+        const errorMessage = "";
+        this.setState({cards, errorMessage});
 
       })
       .catch((error) => {
-
-        //fill in an error handler here
-
+        const errorMessage = error.message;
+        this.setState({errorMessage});
       });
   }
 
@@ -41,12 +42,13 @@ class Board extends Component {
 
         const newCard = response.data.card;
         const cards = [newCard, ...this.state.cards];
-
-        this.setState({cards});
+        const errorMessage = "";
+        this.setState({cards, errorMessage});
 
       })
       .catch((error) => {
-        // do something
+        const errorMessage = error.message;
+        this.setState({errorMessage});
       })
 
   }
@@ -60,10 +62,12 @@ class Board extends Component {
         const cards = [...this.state.cards];
         const deletedCard = cards.find((card) => card.id === cardId);
         cards.splice(cards.indexOf(deletedCard), 1);
-        this.setState({cards});
+        const errorMessage = "";
+        this.setState({cards, errorMessage});
       })
       .catch((error) => {
-
+        const errorMessage = error.message;
+        this.setState({errorMessage});
       })
 
   }
@@ -77,6 +81,7 @@ class Board extends Component {
   render() {
     return (
       <section>
+        {this.state.errorMessage && <section>{this.state.errorMessage}</section>}
         <NewCardForm addCardCallback={this.addCard}/>
         <div className='board'>
           {this.populateCards()}
