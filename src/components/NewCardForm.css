@@ -3,7 +3,8 @@
 .new-card-form {
   width: 50%;
   margin: auto;
-  padding-bottom: 4rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .new-card-form__header {

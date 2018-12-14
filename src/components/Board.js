@@ -76,10 +76,12 @@ class Board extends Component {
 
   render() {
     return (
-      <div>
-        {this.populateCards()}
+      <section>
         <NewCardForm addCardCallback={this.addCard}/>
-      </div>
+        <div className='board'>
+          {this.populateCards()}
+        </div>
+      </section>
 
     )
   }
