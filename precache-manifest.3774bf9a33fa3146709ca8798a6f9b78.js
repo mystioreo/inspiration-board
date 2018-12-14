@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/inspiration-board/static/js/runtime~main.d769499a.js"
   },
   {
-    "revision": "ffc9d51f27e5094e13605b10aafa93a4",
+    "revision": "95686ea07c57540646df271c085a4ba8",
     "url": "/inspiration-board/index.html"
   }
 ];
